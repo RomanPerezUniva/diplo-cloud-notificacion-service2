@@ -50,13 +50,15 @@ public class NotificacionServiceApplicationTests {
 
 	// .withBasicAuth(ADMIN_TEST_LOGIN, ADMIN_TEST_PASSWORD)
 
-
+        
 	@Test
 	public void getNotificacionesTest() {
 		TestRestTemplate testRestTemplate = new TestRestTemplate();
 		ResponseEntity<NotificacionResponse[]> response = testRestTemplate.getForEntity(BASE_URL, NotificacionResponse[].class);
 		Assert.assertEquals(HttpStatus.OK, response.getStatusCode());
 	}
+
+
 
 	@Test
 	public void getNotificacionByIdMockSuccessTest()  {
